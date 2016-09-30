@@ -1,0 +1,106 @@
+<html>
+
+<head>
+
+    <script type="text/javascript" src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+        crossorigin="anonymous">
+
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp"
+        crossorigin="anonymous">
+
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+        crossorigin="anonymous"></script>
+
+    <script src="https://use.fontawesome.com/ace981c8cf.js"></script>
+
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,700|Open+Sans:300,400,600,700|Pacifico|Abril+Fatface" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/styles.css" type="text/css">
+
+    <link rel="stylesheet" href="css/weather-icons.min.css" type="text/css">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+</head>
+
+<body>
+
+<!-- Facebook ShareButton -->
+
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.7";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+    <!--Nav Bar Contents-->
+
+<nav class="navbar navbar-fixed navbar-dark bg-inverse text-center">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" id="plus" class="navbar-toggle collapsed glyphicon glyphicon-plus-sign" data-toggle="collapse" data-target="#collapsedSubmit" aria-expanded="false">
+
+      </button>
+      <a class="navbar-brand center" id="logo">map.ly</a>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse nav" id="collapsedSubmit">
+      <div class="navbar-form navbar-right text-center">
+                           <fieldset>
+                        <label>Generate Map For:
+                <input type="text" id="zipCode" placeholder="Enter Zip Code"> <button id="submit">Submit</button> 
+            </label>
+            <label> <div class="fb-share-button push-right" data-href="https://jnmabry.github.io/" data-layout="button" data-size="large" data-mobile-iframe="true"><a class="fb-xfbml-parse-ignore" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fjnmabry.github.io%2F&amp;src=sdkpreparse"><iframe src="https://www.facebook.com/plugins/share_button.php?href=https%3A%2F%2Fjnmabry.github.io%2F&layout=button&size=large&mobile_iframe=true&width=73&height=28&appId" width="73" height="28" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true"></iframe></a></div></label>
+                    </fieldset>
+                     <!-- Facebook Share Plugin -->
+      </div>
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>
+
+    
+    <!--Start of Body Contents-->
+
+    <div class="container">
+
+        <div class="row" id="topRow">
+
+            <div class="col-md-4 col-xs-12 col-sm-6" hidden>
+
+                <div class="text-center">
+                <h1>Your City Here</h1>
+                <div id="map"></div>
+                </div>
+
+                </div>
+        </div>
+
+    </div>
+
+    </div>
+    <script async defer
+    
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBaf9sQNNkczghyWoLzr5N21JVIoN7sYkE&callback=initMap">
+</script>
+    <script src="main.js"></script>
+</body>
+
+</html>
+
+
+<!-- Your page should be able to display the following information for more than one location using cards.
+Current Temperature
+City, State
+Max Temp for the day
+Min Temp for the day
+Rain % for the day-->
